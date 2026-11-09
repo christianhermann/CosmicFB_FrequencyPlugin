@@ -15,7 +15,7 @@ cp "$REPO_DIR/systemd/cosmic-frequent-folders.timer" "$SYSTEMD_USER_DIR/"
 
 systemctl --user daemon-reload
 systemctl --user enable --now cosmic-frequent-folders.timer
-"$BIN_DIR/cosmic-frequent-folders"
+systemctl --user start cosmic-frequent-folders.service
 
 echo "Installation abgeschlossen. Timer Status:"
 systemctl --user list-timers cosmic-frequent-folders.timer --no-pager
