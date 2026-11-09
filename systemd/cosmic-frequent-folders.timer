@@ -1,0 +1,10 @@
+[Unit]
+Description=Periodic sync of frequently used folders into COSMIC Files sidebar
+
+[Timer]
+OnStartupSec=1min
+OnUnitActiveSec=15min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

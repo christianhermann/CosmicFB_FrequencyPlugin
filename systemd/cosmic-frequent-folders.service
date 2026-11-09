@@ -1,0 +1,10 @@
+[Unit]
+Description=Update COSMIC Files sidebar with most frequently used folders
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/cosmic-frequent-folders
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
